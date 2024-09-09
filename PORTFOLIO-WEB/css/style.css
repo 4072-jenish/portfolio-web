@@ -12,20 +12,46 @@
     --white: #ffffff;
 }
 .BG{
-    background-color:  var(--primery);
+    position: sticky;    
+    background-image: url("../img/banner-bg-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.btn-btn{
+    color: var(--primery);
+    background-color: var(--secondery);
+    box-shadow: 5px 5px 5px var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border: none;
+    transition: 0.5s;
+}
+.btn-btn:hover{
+    color: var(--secondery);
+    background-color: var(--primery);
+    box-shadow: none;
 }
 
 /* HEADER */
 
 header{
     background-color: transparent;
+    backdrop-filter: blur(5px);
     position: sticky;
-    backdrop-filter: blur(2px);
+    z-index: 1;
+    
+}
+.nav-link{
+    transition: 0.5s;
+
 }
 .nav-link:hover{
-    color: #FFA902 ;
-    box-shadow: 1px 5px 5px var(--white);
-    transition: 0.5s;
+    color: #FFA902 !important;
+    text-shadow: 1px 5px 5px var(--secondery);
+    border-radius: 10%;
 }
 header img{
     width: 150px;
@@ -36,14 +62,12 @@ header img{
 
 .banner{
     margin-top: 50px;
-    background-color: var(--primery)
 }
-.banner-img{
-    width: 400px;
+.banner-img img{
+    width: 700px;
 }
 
-.banner-data{
-    text-align: center;    
+.banner-data{ 
     font-family: 'Dosis';
     color: var(--secondery);
 }
@@ -54,5 +78,4 @@ header img{
 .banner-form{
     border: 5px var(--discription);
 }
-
 
