@@ -9,21 +9,41 @@
     --secondery: #FFA902;
     --discription: #585876;
     --heading: #060548;
+    --white: #ffffff;
 }
 body{
     background-color:  var(--primery);
 }
 
-header {
-    position: fixed;
-    background: transparent;
-    height: 60px;
-    width: 100%;
-    clip: rect( top, offset of right clip from left side, offset of bottom from top, left);
-    -webkit-filter: blur(20px);
-    filter: blur(20px);
+/* HEADER */
+
+header{
+    background-color: transparent;
+    position: sticky;
+    backdrop-filter: blur(2px);
 }
+
 header img{
     width: 150px;
-    backdrop-filter: sepia(90%);
 }
+
+
+/* BANNER */
+
+.banner{
+    margin-top: 50px;
+    background-color: var(--primery)
+}
+
+.banner-data{
+    text-align: center;    
+    font-family: 'Dosis';
+    color: var(--secondery);
+}
+.banner-data h1{
+    color: var(--white);
+    font-family: 'Signika';
+}
+
+
+
