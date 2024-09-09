@@ -22,7 +22,7 @@
 .btn-btn{
     color: var(--primery);
     background-color: var(--secondery);
-    box-shadow: 5px 5px 5px var(--white);
+    box-shadow: 0 0 10px  var(--secondery);
     border-radius: 10px;
     font-weight: 700;
     padding: 5px 10px;
