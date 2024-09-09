@@ -11,7 +11,7 @@
     --heading: #060548;
     --white: #ffffff;
 }
-body{
+.BG{
     background-color:  var(--primery);
 }
 
@@ -22,7 +22,11 @@ header{
     position: sticky;
     backdrop-filter: blur(2px);
 }
-
+.nav-link:hover{
+    color: #FFA902 ;
+    box-shadow: 1px 5px 5px var(--white);
+    transition: 0.5s;
+}
 header img{
     width: 150px;
 }
@@ -34,6 +38,9 @@ header img{
     margin-top: 50px;
     background-color: var(--primery)
 }
+.banner-img{
+    width: 400px;
+}
 
 .banner-data{
     text-align: center;    
@@ -44,6 +51,8 @@ header img{
     color: var(--white);
     font-family: 'Signika';
 }
-
+.banner-form{
+    border: 5px var(--discription);
+}
 
 
