@@ -22,27 +22,31 @@
 .btn-btn{
     color: var(--primery);
     background-color: var(--secondery);
-    box-shadow: 0 0 10px  var(--secondery);
     border-radius: 10px;
     font-weight: 700;
     padding: 5px 10px;
     border: none;
     transition: 0.5s;
+    box-shadow: none;
 }
 .btn-btn:hover{
     color: var(--secondery);
     background-color: var(--primery);
-    box-shadow: none;
+    box-shadow: 0 0 10px  var(--secondery);
+
 }
 
 /* HEADER */
 
 header{
     background-color: transparent;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
     backdrop-filter: blur(5px);
-    position: sticky;
-    z-index: 1;
-    
 }
 .nav-link{
     transition: 0.5s;
@@ -66,7 +70,6 @@ header img{
 .banner-img img{
     width: 700px;
 }
-
 .banner-data{ 
     font-family: 'Dosis';
     color: var(--secondery);
@@ -78,4 +81,169 @@ header img{
 .banner-form{
     border: 5px var(--discription);
 }
+
+/* About */
+
+.Abouts{
+    width: 100%;
+}
+.Abouts .row{
+    width: 100%;
+    height: auto;
+    background-color:rgb(241, 232, 250);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+}
+.Abouts-heading h1{
+      font-size: 42px;
+      width: 555px;
+      height: 100px;
+      font-weight: 600;
+      color: var(--secondery);
+      font-family: 'Signika';
+ 
+}
+.About-head{
+
+    display: flex;
+    margin-top: 26px;
+}
+.head-1{
+
+   width: 136px;
+   height: 42px;
+   padding: 7px 20px;
+   background-color: var(--white);
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+}
+.head-1 p{
+
+   font-size: 20px;
+   font-family: 'Syne';
+   font-weight: 500;
+   color: var(--dis);
+
+}
+.head-2{
+
+   width: 136px;
+   height: 42px;
+   padding: 7px 20px;
+}
+.head-2 p{
+
+   font-size: 20px;
+   font-family: 'Syne';
+   font-weight: 500;
+   color: var(--dis);
+
+}
+.head-3{
+
+   width: 136px;
+   height: 42px;
+   padding: 7px 20px;
+}
+.head-3 p{
+
+   font-size: 20px;
+   font-family: 'Syne';
+   font-weight: 500;
+   color: var(--dis);
+
+}
+.sec3-dis{
+
+   display: flex;
+   justify-content: space-between;
+   margin-top: 50px;
+
+}
+.About-con{
+
+   width: 555px;
+   height: 337px;
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+   border-top-right-radius: 15px;
+   background-color: var(--white);
+   padding: 30px;
+   
+}
+.About-con img{
+
+   width: 99px;
+   height: 89px;
+ 
+}
+.About-con h3{
+
+  padding-top: 15px ;  
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Syne';
+  color: var(--small-heading);
+
+}
+.About-con p{
+   margin-top: 15px;
+   font-size: 16px;
+   font-weight: 400;
+   width: 495px;
+   height: 128px;
+   color: var(--paragraph);
+   line-height: 26px;
+}
+.Abouts-2{
+    display: flex;
+    margin-top: 50px;
+}
+.Abouts-2 .row{
+     display: flex;
+}
+.About-box-1{
+    margin-top: 50px;
+}
+.About-box-2{
+    margin-left: 25px;
+}
+.About-2-1{
+      width: 265px;
+      height: 168px;
+      background-color: var(--secondery);
+      padding: 30px;
+      margin-bottom: 25px;
+      transition: all 0.3s;
+}
+.About-2-1:hover{
+     transform: translateY(-8px);
+     border-radius: 15px;
+     box-shadow: 0 0 10px var(--secondery);
+     background-color: var(--primery);
+     color: var(--secondery);
+     text-shadow: 0 0 10px var(--secondery);
+}
+.About-2-1 h1{
+      width: 205px;
+      height: 47px;  
+      font-size: 34px;
+      color: var(--primery);
+      font-family: 'Signika';
+      font-weight: 600;
+      text-align: center;
+}
+.About-2-1 p{
+font-size: 18px;
+      text-align: center;
+      font-weight: 500;
+      width: 205px;
+      height: 50px;
+      text-align: center;
+      font-family: 'Dosis';
+      color: var(--discription);
+}
+
+
 
