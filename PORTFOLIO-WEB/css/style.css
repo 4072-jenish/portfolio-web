@@ -17,6 +17,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 50px;
 }
 
 .btn-btn{
@@ -41,12 +42,14 @@
 header{
     background-color: transparent;
     width: 100%;
-    position: fixed;
+    position: fixed !important;
+    top: 0;
+    left: 0;
     z-index: 10;
     display: flex;
     align-items: center;
     background-color: transparent;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 }
 .nav-link{
     transition: 0.5s;
@@ -54,7 +57,7 @@ header{
 }
 .nav-link:hover{
     color: #FFA902 !important;
-    text-shadow: 1px 5px 5px var(--secondery);
+    text-shadow: 0 0 10px var(--secondery);
     border-radius: 10%;
 }
 header img{
@@ -65,7 +68,7 @@ header img{
 /* BANNER */
 
 .banner{
-    margin-top: 50px;
+    padding-top: 250px;
 }
 .banner-img img{
     width: 700px;
@@ -77,14 +80,28 @@ header img{
 .banner-data h1{
     color: var(--white);
     font-family: 'Signika';
+    display: inline-block;
+    align-items: end;
 }
 .banner-form{
     border: 5px var(--discription);
 }
+.hi_icon{
+    display: flex;
+    align-items: end;
+}
+.hi_icon img{
+    width: 50px;
+    display: inline-block;
+}
+.hi_icon img:hover{
+    transform: scaleX(5px, 5px);
+}
+
 
 /* About */
 
-.Abouts{
+.About{
     width: 100%;
 }
 .Abouts .row{
@@ -95,7 +112,7 @@ header img{
     padding: 30px;
     display: flex;
 }
-.Abouts-heading h1{
+.About-heading h1{
       font-size: 42px;
       width: 555px;
       height: 100px;
@@ -196,7 +213,7 @@ header img{
    color: var(--paragraph);
    line-height: 26px;
 }
-.Abouts-2{
+.About-2{
     display: flex;
     margin-top: 50px;
 }
@@ -244,6 +261,5 @@ font-size: 18px;
       font-family: 'Dosis';
       color: var(--discription);
 }
-
 
 
