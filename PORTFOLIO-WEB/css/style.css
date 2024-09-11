@@ -7,13 +7,13 @@
 :root{
     --primery: #060548;
     --secondery: #FFA902;
-    --discription: #585876;
+    --discription: #9191b1;
     --heading: #060548;
     --white: #ffffff;
 }
 .BG{
     position: sticky;    
-    background-image: url("../img/banner-bg-img.jpg");
+    background-image: url("../img/bg_fluid.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -53,7 +53,6 @@ header{
 }
 .nav-link{
     transition: 0.5s;
-
 }
 .nav-link:hover{
     color: #FFA902 !important;
@@ -70,12 +69,23 @@ header img{
 .banner{
     padding-top: 250px;
 }
+.banner-info{
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+}
 .banner-img img{
-    width: 700px;
+    width: 500px;
 }
 .banner-data{ 
+    font-size: 16px;
+    color: var(--discription);
     font-family: 'Dosis';
-    color: var(--secondery);
+    font-weight: 600; 
+    text-shadow: 0 0 10px var(--primery);
 }
 .banner-data h1{
     color: var(--white);
@@ -94,124 +104,51 @@ header img{
     width: 50px;
     display: inline-block;
 }
-.hi_icon img:hover{
-    transform: scaleX(5px, 5px);
-}
 
 
 /* About */
 
 .About{
     width: 100%;
+    background-image: url("../img/bg_fluid.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
 }
-.Abouts .row{
-    width: 100%;
-    height: auto;
-    background-color:rgb(241, 232, 250);
-    border-radius: 20px;
-    padding: 30px;
+.About .row{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.About-heading h1{
+.About-title h1{
       font-size: 42px;
       width: 555px;
       height: 100px;
       font-weight: 600;
+      text-shadow: 0 0 10px var(--primery);
       color: var(--secondery);
       font-family: 'Signika';
- 
+      display: inline;
 }
-.About-head{
-
-    display: flex;
-    margin-top: 26px;
+.About-title img{
+    width: 70px;
 }
-.head-1{
-
-   width: 136px;
-   height: 42px;
-   padding: 7px 20px;
-   background-color: var(--white);
-   border-top-left-radius: 15px;
-   border-top-right-radius: 15px;
+.About-dics p{
+    font-size: 16px;
+    color: var(--discription);
+    font-family: 'Dosis';
+    font-weight: 600;  
+    padding-top: 50px;
+    text-shadow: 0 0 10px var(--primery);
 }
-.head-1 p{
-
-   font-size: 20px;
-   font-family: 'Syne';
-   font-weight: 500;
-   color: var(--dis);
-
-}
-.head-2{
-
-   width: 136px;
-   height: 42px;
-   padding: 7px 20px;
-}
-.head-2 p{
-
-   font-size: 20px;
-   font-family: 'Syne';
-   font-weight: 500;
-   color: var(--dis);
-
-}
-.head-3{
-
-   width: 136px;
-   height: 42px;
-   padding: 7px 20px;
-}
-.head-3 p{
-
-   font-size: 20px;
-   font-family: 'Syne';
-   font-weight: 500;
-   color: var(--dis);
-
-}
-.sec3-dis{
-
-   display: flex;
-   justify-content: space-between;
-   margin-top: 50px;
-
-}
-.About-con{
-
-   width: 555px;
-   height: 337px;
-   border-bottom-left-radius: 15px;
-   border-bottom-right-radius: 15px;
-   border-top-right-radius: 15px;
-   background-color: var(--white);
-   padding: 30px;
-   
-}
-.About-con img{
-
-   width: 99px;
-   height: 89px;
- 
-}
-.About-con h3{
-
-  padding-top: 15px ;  
-  font-size: 22px;
-  font-weight: 700;
-  font-family: 'Syne';
-  color: var(--small-heading);
-
-}
-.About-con p{
-   margin-top: 15px;
-   font-size: 16px;
-   font-weight: 400;
-   width: 495px;
-   height: 128px;
-   color: var(--paragraph);
-   line-height: 26px;
+.About-part-1{
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    padding: 10px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
 }
 .About-2{
     display: flex;
@@ -226,23 +163,26 @@ header img{
 .About-box-2{
     margin-left: 25px;
 }
-.About-2-1{
+.About-info{
       width: 265px;
       height: 168px;
+     border-radius: 15px;
       background-color: var(--secondery);
       padding: 30px;
       margin-bottom: 25px;
       transition: all 0.3s;
 }
-.About-2-1:hover{
+.About-info:hover{
      transform: translateY(-8px);
-     border-radius: 15px;
      box-shadow: 0 0 10px var(--secondery);
      background-color: var(--primery);
      color: var(--secondery);
-     text-shadow: 0 0 10px var(--secondery);
+     text-shadow: 0 0 20px var(--secondery);
 }
-.About-2-1 h1{
+.About-info:hover p{
+    display: block
+}
+.About-info h1{
       width: 205px;
       height: 47px;  
       font-size: 34px;
@@ -250,9 +190,10 @@ header img{
       font-family: 'Signika';
       font-weight: 600;
       text-align: center;
+
 }
-.About-2-1 p{
-font-size: 18px;
+.About-info p{
+      font-size: 18px;
       text-align: center;
       font-weight: 500;
       width: 205px;
@@ -260,6 +201,5 @@ font-size: 18px;
       text-align: center;
       font-family: 'Dosis';
       color: var(--discription);
+      display: none;
 }
-
-
