@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
 }
-
 :root{
     --primery: #060548;
     --secondery: #FFA902;
@@ -19,7 +18,17 @@
     background-size: cover;
     padding: 50px;
 }
-
+.dics{
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    width: 205px;
+    height: 50px;
+    text-align: center;
+    font-family: 'Dosis';
+    color: var(--discription);
+    display: none; 
+}
 .btn-btn{
     color: var(--primery);
     background-color: var(--secondery);
@@ -63,7 +72,6 @@ header img{
     width: 150px;
 }
 
-
 /* BANNER */
 
 .banner{
@@ -78,7 +86,7 @@ header img{
     left: 0;
 }
 .banner-img img{
-    width: 500px;
+    width: 400px;
 }
 .banner-data{ 
     font-size: 16px;
@@ -92,10 +100,7 @@ header img{
     font-family: 'Signika';
     display: inline-block;
     align-items: end;
-}
-.banner-form{
-    border: 5px var(--discription);
-}
+} 
 .hi_icon{
     display: flex;
     align-items: end;
@@ -105,12 +110,11 @@ header img{
     display: inline-block;
 }
 
-
 /* About */
 
 .About{
     width: 100%;
-    background-image: url("../img/bg_fluid.jpg");
+    background-color: var(--primery);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -139,8 +143,14 @@ header img{
     color: var(--discription);
     font-family: 'Dosis';
     font-weight: 600;  
-    padding-top: 50px;
+    padding-top: 30px;
     text-shadow: 0 0 10px var(--primery);
+}
+.social_media p{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Dosis';
+    color: var(--secondery);
 }
 .About-part-1{
     background-color: transparent;
@@ -191,15 +201,4 @@ header img{
       font-weight: 600;
       text-align: center;
 
-}
-.About-info p{
-      font-size: 18px;
-      text-align: center;
-      font-weight: 500;
-      width: 205px;
-      height: 50px;
-      text-align: center;
-      font-family: 'Dosis';
-      color: var(--discription);
-      display: none;
 }
