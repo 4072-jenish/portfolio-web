@@ -12,11 +12,12 @@
 }
 .BG{
     position: sticky;    
-    background-image: url("../img/bg_fluid.jpg");
+    background-color: var(--primery);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 50px;
+    background-attachment: fixed;
 }
 .dics{
     font-size: 18px;
@@ -38,6 +39,7 @@
     border: none;
     transition: 0.5s;
     box-shadow: none;
+    text-decoration: none;
 }
 .btn-btn:hover{
     color: var(--secondery);
@@ -46,17 +48,24 @@
 
 }
 
+html::-webkit-scrollbar{
+    width: 12px;
+}
+html::-webkit-scrollbar-track{
+    background: var(--primery);
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--secondery);
+    border-radius: 5px;
+}
+
 /* HEADER */
 
 header{
-    background-color: transparent;
-    width: 100%;
     position: fixed !important;
     top: 0;
     left: 0;
-    z-index: 10;
-    display: flex;
-    align-items: center;
+    z-index: 999;
     background-color: transparent;
     backdrop-filter: blur(10px);
 }
@@ -75,11 +84,11 @@ header img{
 /* BANNER */
 
 .banner{
-    padding-top: 250px;
+    padding-top: 100px;
 }
 .banner-info{
-    background-color: transparent;
-    backdrop-filter: blur(15px);
+    /* background-color: transparent; */
+    backdrop-filter: blur(5px);    
     padding: 50px;
     border-radius: 20px;
     top: 0;
@@ -95,12 +104,151 @@ header img{
     font-weight: 600; 
     text-shadow: 0 0 10px var(--primery);
 }
-.banner-data h1{
-    color: var(--white);
+.cd-intro h1{
+
+    color: var(--secondery);
     font-family: 'Signika';
     display: inline-block;
     align-items: end;
-} 
+    
+}
+
+
+  
+  .cd-words-wrapper {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+  }
+  .cd-words-wrapper b {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+    top: 0;
+  }
+  .cd-words-wrapper b.is-visible {
+    position: relative;
+  }
+  
+
+
+.cd-headline.type .cd-words-wrapper {
+    vertical-align: top;
+    overflow: hidden;
+  }
+  .cd-headline.type .cd-words-wrapper::after {
+    /* vertical bar */
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 90%;
+    width: 1px;
+    background-color: var(--discription);
+  }
+  .cd-headline.type .cd-words-wrapper.waiting::after {
+    -webkit-animation: cd-pulse 1.5s infinite;
+    -moz-animation: cd-pulse 1.5s infinite;
+    animation: cd-pulse 1.5s infinite;
+  }
+  .cd-headline.type .cd-words-wrapper.selected {
+    background-color: var(--discription);
+  }
+  .cd-headline.type .cd-words-wrapper.selected::after {
+    visibility: hidden;
+  }
+  .cd-headline.type .cd-words-wrapper.selected b {
+    color: var(--primery);
+  }
+  .cd-headline.type b {
+    visibility: hidden;
+  }
+  .cd-headline.type b.is-visible {
+    visibility: visible;
+  }
+  .cd-headline.type i {
+    position: absolute;
+    visibility: hidden;
+  }
+  .cd-headline.type i.in {
+    position: relative;
+    visibility: visible;
+  }
+  
+  @-webkit-keyframes cd-pulse {
+    0% {
+        transition: 0.5s;
+      -webkit-transform: translateY(-50%) scale(1);
+      opacity: 1;
+    }
+    40% {
+        transition: 0.5s;
+      -webkit-transform: translateY(-50%) scale(0.9);
+      opacity: 0;
+    }
+    100% {
+        transition: 0.5s;
+      -webkit-transform: translateY(-50%) scale(0);
+      opacity: 0;
+    }
+  }
+  @-moz-keyframes cd-pulse {
+    0% {
+        transition: 0.5s;
+      -moz-transform: translateY(-50%) scale(1);
+      opacity: 1;
+    }
+    40% {
+        transition: 0.5s;
+      -moz-transform: translateY(-50%) scale(0.9);
+      opacity: 0;
+    }
+    100% {
+        transition: 0.5s;
+      -moz-transform: translateY(-50%) scale(0);
+      opacity: 0;
+    }
+  }
+  @keyframes cd-pulse {
+    0% {
+        transition: 0.5s;
+      -webkit-transform: translateY(-50%) scale(1);
+      -moz-transform: translateY(-50%) scale(1);
+      -ms-transform: translateY(-50%) scale(1);
+      -o-transform: translateY(-50%) scale(1);
+      transform: translateY(-50%) scale(1);
+      opacity: 1;
+    }
+    40% {
+        transition: 0.5s;
+      -webkit-transform: translateY(-50%) scale(0.9);
+      -moz-transform: translateY(-50%) scale(0.9);
+      -ms-transform: translateY(-50%) scale(0.9);
+      -o-transform: translateY(-50%) scale(0.9);
+      transform: translateY(-50%) scale(0.9);
+      opacity: 0;
+    }
+    100% {
+        transition: 0.5s;
+      -webkit-transform: translateY(-50%) scale(0);
+      -moz-transform: translateY(-50%) scale(0);
+      -ms-transform: translateY(-50%) scale(0);
+      -o-transform: translateY(-50%) scale(0);
+      transform: translateY(-50%) scale(0);
+      opacity: 0;
+    }
+  }
+
+
+
+
 .hi_icon{
     display: flex;
     align-items: end;
@@ -114,11 +262,12 @@ header img{
 
 .About{
     width: 100%;
-    background-color: var(--primery);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: var(--primery);
     padding: 50px;
+    padding-top: 150px !important;
+    padding-bottom: 150px !important;
+    z-index: 1;
+    /* background-attachment: fixed; */
 }
 .About .row{
     display: flex;
@@ -153,12 +302,10 @@ header img{
     color: var(--secondery);
 }
 .About-part-1{
-    background-color: transparent;
-    backdrop-filter: blur(15px);
+
     padding: 10px;
     border-radius: 20px;
-    top: 0;
-    left: 0;
+
 }
 .About-2{
     display: flex;
@@ -167,7 +314,7 @@ header img{
 .Abouts-2 .row{
      display: flex;
 }
-.About-box-1{
+.About-box-1 {
     margin-top: 50px;
 }
 .About-box-2{
@@ -202,3 +349,280 @@ header img{
       text-align: center;
 
 }
+
+
+/* Skills */
+
+.skills-edu{
+   padding: 50px;
+    background-image: url("../img/bfg_fluid.jpg");
+   position: sticky;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   transition: 1s;
+
+}
+.skill-heading h1{
+    font-family: 'Signika';
+    font-weight: 600;
+    color: var(--secondery);
+}
+.skill-card {
+    text-align: center;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    margin-bottom: 20px;
+    transition: 0.8s;
+}
+.skill-card:hover{ 
+    transform: translateY(-8px);
+    box-shadow: 0 0 10px var(--secondery);
+    background-color: var(--secondery);
+    color: var(--primery);
+    text-shadow: 0 0 20px var(--secondery);
+}
+.skill-card h3{
+    text-align: center !important;
+    font-family: 'Signika' !important;
+    font-weight: 600 !important;
+    color: var(--secondery);
+    transition: 0.5s;
+}
+.skill-card:hover h3{
+    color: var(--primery);
+}
+.me{
+    margin-right: 70px;
+    margin-left: 70px;
+}
+.dart{
+    width: 200px;
+}
+
+/* PROJECTS */
+.Projects{
+    padding: 50px; 
+    background-color: var(--primery);
+    padding-bottom: 100px;
+}
+.project-count{
+    text-align: center;
+}
+.pg-card{
+    border-radius: 15px;
+    border: 2px solid var(--white);
+    padding: 25px;
+    box-shadow: 10px 10px 20px var(--secondery);
+    transition: 0.5s;
+}
+.pg-card:hover p{
+    color: var(--primery);
+}
+.pg-card:hover h3{
+    color: var(--primery);
+}
+.pg-card:hover{
+    box-shadow: none;
+    transform: translate(-5px);
+    color: var(--primery);
+    background-color: #FFA902;
+}
+.project-heading h1{
+    font-family: 'Signika';
+    font-weight: 600;
+    color: var(--secondery);
+    margin-bottom: 50px;
+}
+.second{
+    margin-left: 160px;
+    margin-right: 160px;
+}
+.first h3{
+    font-family: 'Signika';
+    font-weight: 600;
+    color: var(--secondery);
+}
+.second h3{
+    font-family: 'Signika';
+    font-weight: 600;
+    color: var(--secondery);
+}
+.third h3{
+    font-family: 'Signika';
+    font-weight: 600;
+    color: var(--secondery);
+}
+.first img{
+      width: 300px;
+      height: 162px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+}
+.second img{
+      width: 300px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+}
+.third img{
+      width: 300px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+}
+.first p{
+    font-size: 16px;
+    color: var(--discription);
+    font-family: 'Dosis';
+    font-weight: 600;  
+    text-shadow: 0 0 10px var(--primery);
+}
+.second p{
+    font-size: 16px;
+    color: var(--discription);
+    font-family: 'Dosis';
+    font-weight: 600;  
+    text-shadow: 0 0 10px var(--primery);
+}
+.third p{
+    font-size: 16px;
+    color: var(--discription);
+    font-family: 'Dosis';
+    font-weight: 600;
+    text-shadow: 0 0 10px var(--primery);
+}
+
+
+/* CONTACT */
+.contact{
+    position: sticky;    
+    background-image: url("../img/bfg_fluid.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+    background-attachment: fixed;
+}
+.contact-heading h1{
+    font-family: 'Signika';
+    font-weight: 600;
+    color: var(--secondery);
+}
+form input{
+    border: 2px solid var(--secondery) !important;
+    color: var(--white) !important;
+    background-color: transparent !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 0 10px var(--white);
+    transition: 0.5s ease-in-out !important;
+}
+form input:hover{
+    background-color: var(--secondery) !important;
+    box-shadow: none;
+    color: var(--primery) !important;
+}
+form label{
+    font-size: 16px;
+    color: var(--discription);
+    font-family: 'Dosis';
+    font-weight: 600;  
+    text-shadow: 0 0 10px var(--primery);
+}
+textarea{
+    border: 2px solid var(--secondery) !important;
+    color: var(--white) !important;
+    background-color: transparent !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 0 10px var(--white);
+    transition: 0.5s ease-in-out !important; 
+}
+textarea:hover{
+    background-color: var(--secondery) !important;
+    box-shadow: none;
+    color: var(--primery) !important;
+}
+
+/* FOOTER */
+
+footer{
+    padding: 50px;
+    background-color: var(--primery);
+}
+
+footer h6{
+    font-family: 'Signika';
+    font-weight: 600;
+    color: var(--secondery);
+}
+footer p{
+    font-size: 16px;
+    color: var(--white);
+    font-family: 'Dosis';
+    font-weight: 600;
+    text-shadow: 0 0 10px var(--primery);
+    border-radius: 5px;
+    padding: 5px;
+}
+footer a{
+    font-size: 16px;
+    color: var(--white) !important;
+    font-family: 'Dosis';
+    font-weight: 600;
+    text-shadow: 0 0 10px var(--primery);
+    border-radius: 5px;
+    padding: 5px;
+}
+footer p:hover {
+    color: var(--primery) !important;
+    background-color: var(--secondery) !important;
+}
+footer a:hover {
+    color: var(--primery) !important;
+    background-color: var(--secondery) !important;
+}
+
+
+.cursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid var(--discription);
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: 999;
+  }
+  
+  .cursor2 {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: var(--secondery);
+    opacity: .3;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+    z-index: 999;
+  }
+  
+  .hover {
+    background-color: var(--heading);
+    opacity: 0.5;
+  }
+  
+  .cursorinnerhover {
+    width: 10px;
+    height: 10px;
+    opacity: .5;
+  }
+   
+ 
+  
+/* 
+/* ---- reset ---- */ 
+body{ scroll-behavior: smooth; margin:0; font:normal 50% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; overflow-x: hidden;} /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 97%; height: 100%; background-image: linear-gradient(#060548); background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; overflow: hidden; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: 50px; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats,  #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; } 
